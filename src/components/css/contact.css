@@ -43,7 +43,7 @@
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    background-color: var(--color-accent);
+    background-color: var(--color-text-primary);
     color: var(--color-bg-base); /* Dunkler Text auf hellem Akzent */
     padding: 14px 32px;
     border-radius: 100px;
@@ -69,6 +69,7 @@
     align-items: center;
     gap: 20px;
     text-decoration: none;
+    color: var(--color-text-primary);
 }
 
 .contact-detail-icon {
