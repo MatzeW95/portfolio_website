@@ -6,30 +6,26 @@ function App() {
   // Konfiguration für die Navigation
   const navItems = [
     {
-      label: 'Projekte',
-      bgColor: '#2d2d2d',
-      textColor: '#EDEDED',
+      label: 'Informationen',
+      href: '#informationen',
       links: [
-        { label: 'Webseite A', href: '#project-a' },
-        { label: 'App B', href: '#project-b' }
+        { label: 'Über mich' },
+        { label: 'Skills' }
       ]
     },
     {
-      label: 'Info',
-      bgColor: '#2d2d2d',
-      textColor: '#EDEDED',
+      label: 'Projekte',
+      href: '#projekte',
       links: [
-        { label: 'Über mich', href: '#about' },
-        { label: 'Skills', href: '#skills' }
+        { label: 'Webseite A' },
+        { label: 'App B' }
       ]
     },
     {
       label: 'Kontakt',
-      bgColor: '#2d2d2d',
-      textColor: '#EDEDED',
+      href: '#kontakt',
       links: [
-        { label: 'Email', href: 'mailto:kontakt@example.com' },
-        { label: 'LinkedIn', href: '#' }
+        { label: 'Email' }
       ]
     }
   ];

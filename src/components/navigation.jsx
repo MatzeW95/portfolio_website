@@ -1,17 +1,14 @@
 import { useLayoutEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 // use your own icon import if react-icons is not available
-import { GoArrowUpRight } from 'react-icons/go';
+import { HiMiniArrowLongRight } from "react-icons/hi2";
+
 import './css/navigation.css';
 
 const CardNav = ({
   items,
   className = '',
-  ease = 'power3.out',
-  baseColor = '#1E1E1E',
-  menuColor = '#EDEDED',
-  buttonBgColor,
-  buttonTextColor
+  ease = 'power3.out'
 }) => {
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
@@ -133,7 +130,7 @@ const CardNav = ({
 
   return (
     <div className={`card-nav-container ${className}`}>
-      <nav ref={navRef} className={`card-nav ${isExpanded ? 'open' : ''}`} style={{ backgroundColor: baseColor }}>
+      <nav ref={navRef} className={`card-nav ${isExpanded ? 'open' : ''}`}>
         <div className="card-nav-top">
           <div
             className={`hamburger-menu ${isHamburgerOpen ? 'open' : ''}`}
@@ -141,7 +138,6 @@ const CardNav = ({
             role="button"
             aria-label={isExpanded ? 'Close menu' : 'Open menu'}
             tabIndex={0}
-            style={{ color: menuColor || '#000' }}
           >
             <div className="hamburger-line" />
             <div className="hamburger-line" />
@@ -150,7 +146,6 @@ const CardNav = ({
           <button
             type="button"
             className="card-nav-cta-button"
-            style={{ backgroundColor: buttonBgColor, color: buttonTextColor }}
           >
             Kontakt
           </button>
@@ -158,22 +153,23 @@ const CardNav = ({
 
         <div className="card-nav-content" aria-hidden={!isExpanded}>
           {(items || []).slice(0, 3).map((item, idx) => (
-            <div
+            <a
               key={`${item.label}-${idx}`}
               className="nav-card"
+              href={item.href}
               ref={setCardRef(idx)}
-              style={{ backgroundColor: item.bgColor, color: item.textColor }}
             >
               <div className="nav-card-label">{item.label}</div>
               <div className="nav-card-links">
                 {item.links?.map((lnk, i) => (
-                  <a key={`${lnk.label}-${i}`} className="nav-card-link" href={lnk.href} aria-label={lnk.ariaLabel}>
-                    <GoArrowUpRight className="nav-card-link-icon" aria-hidden="true" />
+                  <div key={`${lnk.label}-${i}`} className='nav-card-text-combo'>
+                    <HiMiniArrowLongRight className="nav-card-link-icon" />
+                    &nbsp;
                     {lnk.label}
-                  </a>
+                  </div>
                 ))}
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </nav>
