@@ -2,6 +2,7 @@ import React from 'react';
 import CardNav from './components/navigation';
 import Information from './components/information';
 import Projects from './components/project';
+import Contact from './components/contact';
 import './style.css';
 
 function App() {
@@ -39,14 +40,7 @@ function App() {
       <main className="container">
         <Information />
         <Projects />
-        
-        {/* Beispiel für die responsive Steuerung */}
-        <div className="desktop-only">
-          <p><em>(Du bist auf einem Desktop-Gerät)</em></p>
-        </div>
-        <div className="mobile-only">
-          <p><em>(Du bist auf einem mobilen Gerät)</em></p>
-        </div>
+        <Contact />
       </main>
     </div>
   );
