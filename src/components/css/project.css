@@ -1,0 +1,138 @@
+.projects-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-bottom: 100px;
+}
+
+/* Tags */
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.project-tag {
+    font-size: 0.85rem;
+    padding: 4px 12px;
+    border-radius: 100px;
+    background-color: var(--color-bg-surface-2);
+    color: var(--color-text-secondary);
+    border: 1px solid var(--color-border-light);
+}
+
+/* --- Option 2: Minimal List Styles --- */
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.project-list-item {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    background-color: var(--color-bg-surface-1);
+    border: 1px solid var(--color-border-light);
+    padding: 24px;
+    border-radius: 16px;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+@media (hover: hover) {
+    .project-list-item:hover {
+        border-color: var(--color-accent);
+        transform: translateX(10px);
+    }
+}
+
+.project-list-image-wrapper {
+    width: 200px;
+    height: 130px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.project-list-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-list-content {
+    flex-grow: 1;
+}
+
+.project-list-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    color: var(--color-text-primary);
+}
+
+.project-list-description {
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    margin: 0 0 16px 0;
+}
+
+.project-list-actions {
+    display: flex;
+    flex-direction: column; /* Vertikal übereinander wie Löcher */
+    gap: 16px;
+    align-items: flex-end;
+}
+
+.project-action-item {
+    display: flex;
+    flex-direction: row; /* Text links neben dem Icon */
+    align-items: center;
+    gap: 12px;
+}
+
+.project-action-label {
+    font-size: 1rem; /* Gleiche Größe wie Beschreibungstext */
+    color: var(--color-text-secondary);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+.project-action-item:hover .project-action-label {
+    opacity: 1;
+}
+
+.project-list-action {
+    font-size: 1.5rem;
+    color: var(--color-text-secondary);
+    padding: 12px;
+    border-radius: 50%;
+    background-color: var(--color-bg-surface-2);
+    display: flex;
+    transition: all 0.3s ease;
+}
+
+.project-list-action:hover {
+    background-color: var(--color-bg-surface-hover);
+    color: var(--color-text-primary);
+}
+
+/* Mobile Adjustments für neue Layouts */
+@media (max-width: 768px) {
+    .project-list-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    
+    .project-list-image-wrapper {
+        width: 100%;
+        height: 200px;
+    }
+    
+    .project-list-actions {
+        align-self: flex-end;
+    }
+}
