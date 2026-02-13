@@ -165,6 +165,11 @@
   opacity: 0.75;
 }
 
+.nav-card-text-combo {
+  display: flex;
+  align-items: center;
+}
+
 @media (max-width: 768px) {
   .card-nav-container {
     width: 90%;
@@ -212,9 +217,5 @@
 
   .nav-card-link {
     font-size: 15px;
-  }
-
-  .nav-card-text-combo {
-    flex-direction: column;
   }
 }
