@@ -1,5 +1,6 @@
 import React from 'react';
 import CardNav from './components/navigation';
+import Information from './components/information';
 import './style.css';
 
 function App() {
@@ -35,8 +36,7 @@ function App() {
       <CardNav items={navItems}/>
 
       <main className="container">
-        <h1>Willkommen auf meinem Portfolio</h1>
-        <p>Hier werden bald meine Projekte zu sehen sein.</p>
+        <Information />
         
         {/* Beispiel für die responsive Steuerung */}
         <div className="desktop-only">
