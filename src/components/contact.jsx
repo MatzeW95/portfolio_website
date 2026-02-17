@@ -23,13 +23,12 @@ const Contact = () => {
 
       {/* Zusätzliches E-Mail Feld (aus Option 3) */}
       <div className="contact-email-wrapper">
-        <a href="mailto:kontakt@example.com" className="contact-detail-item">
-          <HiEnvelope className="contact-detail-icon" />
+        <div className="contact-detail-item">
           <div>
             <span className="contact-detail-label">Email</span>
             <span className="contact-detail-value">kontakt@example.com</span>
           </div>
-        </a>
+        </div>
       </div>
 
     </section>
