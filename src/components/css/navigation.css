@@ -75,10 +75,22 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  text-decoration: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
 }
 
-.logo {
-  height: 28px;
+.logo-container.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.logo-text {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  letter-spacing: -0.5px;
 }
 
 .card-nav-cta-button {
@@ -193,6 +205,10 @@
     position: static;
     transform: none;
     order: 1;
+  }
+
+  .logo-text {
+    font-size: 1.1rem;
   }
 
   .card-nav-cta-button {

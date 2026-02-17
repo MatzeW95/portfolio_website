@@ -12,6 +12,7 @@ const CardNav = ({
 }) => {
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
+  const [showLogo, setShowLogo] = useState(false);
   const navRef = useRef(null);
   const cardsRef = useRef([]);
   const tlRef = useRef(null);
@@ -130,6 +131,17 @@ const CardNav = ({
     }
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      // Zeige das Logo erst an, wenn 400px gescrollt wurden
+      setShowLogo(window.scrollY > 400);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initialer Check
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const setCardRef = i => el => {
     if (el) cardsRef.current[i] = el;
   };
@@ -161,6 +173,10 @@ const CardNav = ({
             <div className="hamburger-line" />
             <div className="hamburger-line" />
           </div>
+
+          <a href="#informationen" className={`logo-container ${showLogo ? 'visible' : ''}`} onClick={handleLinkClick}>
+            <span className="logo-text">Matthias Wagner</span>
+          </a>
 
           <a
             href="#kontakt"
