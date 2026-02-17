@@ -4,10 +4,7 @@ import './css/information.css';
 
 const Information = () => {
   // Erweiterte Liste für den Infinity Scroll
-  const techStack = [
-    'React', 'JavaScript (ES6+)', 'TypeScript', 'CSS3 / SCSS', 'Tailwind CSS',
-    'Git', 'Node.js', 'Vite', 'Figma', 'Next.js', 'Redux', 'GraphQL', 'Docker', 'Jest'
-  ];
+  const techStack = [ 'HTML', 'CSS / SCSS', 'JavaScript (ES6+)', 'TypeScript', 'React', 'Node.js', 'JQuery', 'REST API', 'WordPress', 'Elementor', 'Git', 'SEO', 'Vite' ];
 
   return (
     <div className="information-wrapper">
