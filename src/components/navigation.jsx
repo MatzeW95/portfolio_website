@@ -156,12 +156,12 @@ const CardNav = ({
             <div className="hamburger-line" />
           </div>
 
-          <button
-            type="button"
+          <a
+            href="#kontakt"
             className="card-nav-cta-button"
           >
             Kontakt
-          </button>
+          </a>
         </div>
 
         <div className="card-nav-content" aria-hidden={!isExpanded}>

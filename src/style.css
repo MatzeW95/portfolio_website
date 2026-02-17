@@ -18,6 +18,8 @@ html {
     background-color: var(--color-bg-base);
     font-family: 'Roboto', sans-serif;
     color: var(--color-text-primary);
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
 }
 
 body {
