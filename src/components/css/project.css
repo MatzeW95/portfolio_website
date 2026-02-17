@@ -86,14 +86,22 @@
 
 .project-action-item {
     display: flex;
-    flex-direction: row; /* Text links neben dem Icon */
+    flex-direction: column;
     align-items: center;
-    gap: 12px;
+    position: relative;
 }
 
 .project-action-label {
-    font-size: 1rem; /* Gleiche Größe wie Beschreibungstext */
-    color: var(--color-text-secondary);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 8px;
+    background-color: var(--color-bg-surface-2);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    color: var(--color-text-primary);
     opacity: 0;
     transition: opacity 0.2s ease;
     white-space: nowrap;
@@ -133,6 +141,9 @@
     }
     
     .project-list-actions {
-        align-self: flex-end;
+        flex-direction: row;
+        align-self: center;
+        margin-top: 25px;
+        gap: 32px;
     }
 }
