@@ -124,6 +124,12 @@ const CardNav = ({
     }
   };
 
+  const handleLinkClick = () => {
+    if (isExpanded) {
+      toggleMenu();
+    }
+  };
+
   const setCardRef = i => el => {
     if (el) cardsRef.current[i] = el;
   };
@@ -159,6 +165,7 @@ const CardNav = ({
           <a
             href="#kontakt"
             className="card-nav-cta-button"
+            onClick={handleLinkClick}
           >
             Kontakt
           </a>
@@ -171,6 +178,7 @@ const CardNav = ({
               className="nav-card"
               href={item.href}
               ref={setCardRef(idx)}
+              onClick={handleLinkClick}
             >
               <div className="nav-card-label">{item.label}</div>
               <div className="nav-card-links">
