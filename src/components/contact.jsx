@@ -14,19 +14,17 @@ const Contact = () => {
             Ich bin immer offen für neue Projekte, kreative Ideen oder einfach einen netten Austausch. 
             Schreib mir gerne eine Nachricht.
           </p>
-          <a href="mailto:kontakt@example.com" className="contact-button-primary">
+          <a href="mailto:MatthiasWgnr@icloud.com" className="contact-button-primary">
             <HiEnvelope />
             Hallo sagen
           </a>
         </div>
       </div>
-
-      {/* Zusätzliches E-Mail Feld (aus Option 3) */}
       <div className="contact-email-wrapper">
         <div className="contact-detail-item">
           <div>
             <span className="contact-detail-label">Email</span>
-            <span className="contact-detail-value">kontakt@example.com</span>
+            <span className="contact-detail-value">MatthiasWgnr@icloud.com</span>
           </div>
         </div>
       </div>
