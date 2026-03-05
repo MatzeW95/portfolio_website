@@ -13,15 +13,16 @@ function App() {
       href: '#informationen',
       links: [
         { label: 'Über mich' },
-        { label: 'Skills' }
+        { label: 'Tech Stack' }
       ]
     },
     {
       label: 'Projekte',
       href: '#projekte',
       links: [
-        { label: 'Webseite A' },
-        { label: 'App B' }
+        { label: 'Tankstellen Finder' },
+        { label: 'Formularvalidierung' },
+        { label: 'Portfolio Webseite' }
       ]
     },
     {

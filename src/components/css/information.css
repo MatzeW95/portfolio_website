@@ -84,19 +84,17 @@
     position: relative;
 }
 
-.hero-placeholder-shape {
+.hero-image {
     width: 350px;
     height: 350px;
-    background: linear-gradient(45deg, var(--color-bg-surface-2), var(--color-bg-surface-1));
-    border: 2px solid var(--color-border-light);
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    animation: morph 8s ease-in-out infinite;
-}
-
-@keyframes morph {
-    0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
-    50% { border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%; }
-    100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    border: 5px solid var(--color-bg-surface-2);
+    box-shadow: 
+        0 0 0 7px var(--color-border-light),
+        0 10px 40px rgba(0,0,0,0.2);
+    transform: scale(1.1); /* Bild leicht vergrößern */
 }
 
 /* --- Neue Sektionen Styles --- */
@@ -104,6 +102,7 @@
 .info-section {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 40px;
 }
 
@@ -173,6 +172,7 @@
 }
 
 .tech-stack-marquee {
+    width: 100%;
     display: flex;
     overflow: hidden;
     user-select: none;
@@ -187,9 +187,7 @@
     flex-shrink: 0;
     display: flex;
     align-items: center;
-    justify-content: space-around;
     gap: 2rem; /* Abstand zwischen den Badges */
-    min-width: 100%;
     animation: scroll 30s linear infinite;
     will-change: transform; /* Sagt dem Browser, dass sich hier was bewegt */
     transform: translate3d(0, 0, 0); /* Erzwingt GPU-Beschleunigung */
@@ -243,8 +241,8 @@
         justify-content: center;
         gap: 20px;
     }
-    
-    .hero-placeholder-shape {
+
+    .hero-image {
         width: 200px;
         height: 200px;
     }
@@ -253,8 +251,4 @@
         gap: 80px;
     }
 
-    .service-card {
-        max-width: 100%;
-        flex-basis: 100%;
-    }
 }
